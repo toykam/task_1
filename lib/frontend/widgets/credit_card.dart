@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task_1/utils/styles/colors.dart';
 
 class CreditCard extends StatelessWidget {
   CreditCard({Key key}) : super(key: key);
@@ -12,7 +13,7 @@ class CreditCard extends StatelessWidget {
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [Color(0xff2214DA), Color(0xff19145E), Color(0xffAAAAAA)],
+          colors: [primaryColor, Color(0xff19145E), Color(0xffAAAAAA)],
           begin: Alignment.topCenter, end: Alignment.bottomCenter,
           stops: [0, 100, 100]
         ),

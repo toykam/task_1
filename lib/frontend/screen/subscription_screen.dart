@@ -1,6 +1,9 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:task_1/frontend/widgets/HeightSpace.dart';
+import 'package:task_1/frontend/widgets/horizontal_line.dart';
+import 'package:task_1/utils/styles/colors.dart';
 
 class SubscriptionScreen extends StatelessWidget {
   SubscriptionScreen({Key key}) : super(key: key);
@@ -43,7 +46,7 @@ class SubscriptionScreen extends StatelessWidget {
                             )
                         )
                     ),
-                    SizedBox(width: 10,),
+                    RowSpace(10,),
                     Expanded(
                       child: Container(
                         height: 45,
@@ -63,7 +66,7 @@ class SubscriptionScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(width: 10,),
+                    RowSpace(10),
                     Container(
                       padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
                       decoration: BoxDecoration(
@@ -75,7 +78,7 @@ class SubscriptionScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Icon(Icons.account_balance_wallet_rounded, color: Colors.white,),
-                          SizedBox(width: 5,),
+                          RowSpace(5,),
                           Text('Top Up', style: TextStyle(
                             color: Colors.white, fontSize: 14, fontWeight: FontWeight.w400
                           ),)
@@ -90,11 +93,11 @@ class SubscriptionScreen extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(vertical: 19.0, horizontal: 16.0),
                 child: Row(
                   children: [
-                    Icon(Icons.arrow_back_outlined),
-                    SizedBox(width: 20,),
+                    Icon(Icons.arrow_back_outlined, color: Color(0xff2E3A59),),
+                    RowSpace(20,),
                     Text("Use Debit Card", style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 18
+                      fontWeight: FontWeight.w500, color: Color(0xff2E3A59),
+                      fontSize: 14
                     ),)
                   ],
                 ),
@@ -111,40 +114,40 @@ class SubscriptionScreen extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 16.0,),
                           child: Text('Top Up Overview', style: TextStyle(
-                              fontSize: 16, fontWeight: FontWeight.w500
+                              fontSize: 16, fontWeight: FontWeight.w500, color: textColor
                           ),),
                         ),
-                        SizedBox(height: 16,),
+                        ColumnSpace(16,),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 16.0,),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text("Amonnt to Top Up", style: TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.w400
+                              Text("Amount to Top Up", style: TextStyle(
+                                fontSize: 16, fontWeight: FontWeight.w400, color: textColor
                               ),),
                               Text("N 500.00", style: TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.w400, color: Color(0xff2214DA)
+                                fontSize: 16, fontWeight: FontWeight.w400, color: primaryColor
                               ),)
                             ],
                           ),
                         ),
-                        SizedBox(height: 11.02,),
+                        ColumnSpace(11.02,),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 16.0,),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text("VAT", style: TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.w400
+                                fontSize: 16, fontWeight: FontWeight.w400, color: textColor
                               ),),
                               Text("N 0.00", style: TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.w400, color: Color(0xff2214DA)
+                                fontSize: 16, fontWeight: FontWeight.w400, color: textColor
                               ),)
                             ],
                           ),
                         ),
-                        SizedBox(height: 19,),
+                        ColumnSpace(19,),
                         Container(
                           padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
                           color: Color(0xffF7F7F7),
@@ -152,26 +155,23 @@ class SubscriptionScreen extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text("Total Charged", style: TextStyle(
-                                  fontSize: 16, fontWeight: FontWeight.w400
+                                  fontSize: 16, fontWeight: FontWeight.w400, color: primaryColor
                               ),),
                               Text("N 5,000", style: TextStyle(
-                                  fontSize: 16, fontWeight: FontWeight.w400, color: Color(0xff2214DA)
+                                  fontSize: 16, fontWeight: FontWeight.w400, color: primaryColor
                               ),)
                             ],
                           ),
                         ),
-                        SizedBox(height: 36,),
-                        Container(
-                          height: 1,
-                          color: Color(0xffC4C4C4),
-                        ),
-                        SizedBox(height: 38,),
+                        ColumnSpace(36,),
+                        HorizontalLine(),
+                        ColumnSpace(38,),
                         Container(
                           margin: const EdgeInsets.symmetric(horizontal: 30),
                           padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
                           decoration: BoxDecoration(
                             gradient: LinearGradient(
-                              colors: [Color(0xff2214DA), Color(0xff0D093C), Color(0xff1104B2)],
+                              colors: [primaryColor, Color(0xff0D093C), Color(0xff1104B2)],
                               begin: Alignment.topCenter, end: Alignment.bottomCenter,
                               stops: [0, 100, 100]
                             )
@@ -182,14 +182,14 @@ class SubscriptionScreen extends StatelessWidget {
                               Text('Credit Card', style: TextStyle(
                                 color: Colors.white, fontSize: 14, fontWeight: FontWeight.w500
                               ),),
-                              SizedBox(height: 23,),
+                              ColumnSpace(23,),
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text('Card Number', style: TextStyle(
                                     color: Colors.white, fontWeight: FontWeight.w400
                                   ),),
-                                  SizedBox(height: 10,),
+                                  ColumnSpace(10,),
                                   TextFormField(
                                     decoration: InputDecoration(
                                       fillColor: Colors.white, filled: true,
@@ -205,7 +205,7 @@ class SubscriptionScreen extends StatelessWidget {
                                   ),
                                 ],
                               ),
-                              SizedBox(height: 36,),
+                              ColumnSpace(36,),
                               Row(
                                 children: [
                                   Expanded(
@@ -215,7 +215,7 @@ class SubscriptionScreen extends StatelessWidget {
                                         Text('Expiry Date', style: TextStyle(
                                             color: Colors.white, fontWeight: FontWeight.w400
                                         ),),
-                                        SizedBox(height: 10,),
+                                        ColumnSpace(10,),
                                         TextFormField(
                                           decoration: InputDecoration(
                                             fillColor: Colors.white, filled: true,
@@ -232,7 +232,7 @@ class SubscriptionScreen extends StatelessWidget {
                                       ],
                                     ),
                                   ),
-                                  SizedBox(width: 10,),
+                                  RowSpace(10,),
                                   Expanded(
                                     child: Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -240,7 +240,7 @@ class SubscriptionScreen extends StatelessWidget {
                                         Text('CVV', style: TextStyle(
                                             color: Colors.white, fontWeight: FontWeight.w400
                                         ),),
-                                        SizedBox(height: 10,),
+                                        ColumnSpace(10,),
                                         TextFormField(
                                           decoration: InputDecoration(
                                             fillColor: Colors.white, filled: true,
@@ -263,7 +263,7 @@ class SubscriptionScreen extends StatelessWidget {
                             ],
                           ),
                         ),
-                        SizedBox(height: 52,),
+                        ColumnSpace(52,),
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 30),
                           child: Row(
