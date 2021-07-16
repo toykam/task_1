@@ -150,7 +150,9 @@ class _CardUsageState extends State<CardUsage> {
                           )
                         ],
                       ),
-                    )
+                    ),
+                    ColumnSpace(2),
+                    Text('click on the apply button to see the second design')
                   ],
                 ),
               ),
